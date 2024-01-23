@@ -1,0 +1,300 @@
+BEGIN
+start: Hello! How are you doing?
+start: What might your problem be?
+start: Is there anything I can help you with?
+start: Has anything been bothering you lately?
+start: Hi! I am here to listen. How can I help you?
+start: Is something troubling you?
+
+end: Goodbye! I enjoyed our conversation.
+end: Thanks for talking. Come again any time!
+end: I hope this session was useful.
+end: If you ever need anything else, stop by!
+end: I think we made some great progress today. Have a good one!
+
+quit: goodbye
+quit: bye
+quit: end
+quit: quit
+quit: done
+quit: exit
+
+pre: cant can’t
+pre: wont won’t
+pre: arent aren’t
+pre: dont don’t
+pre: you’re you are
+pre: i’m i am
+pre: were was
+pre: there's there is
+pre: i'll i will
+pre: he'll he will
+pre: she'll she will
+pre: they'll they will
+pre: she's she is
+pre: he's he is
+pre: mum family
+pre: mom family
+pre: dad family
+pre: brother family
+pre: sister family
+pre: wife family
+pre: son family
+pre: daughter family
+pre: husband family
+pre: grandma family
+pre: grandpa family
+pre: happy emotion
+pre: sad emotion
+pre: tired emotion
+pre: hungry emotion
+pre: angry emotion
+pre: hurt emotion
+pre: upset emotion
+pre: depressed emotion
+pre: scared emotion
+pre: exhausted emotion
+pre: me i
+
+post: am are
+post: your my
+post: you me
+post: me you
+post: myself yourself
+post: yourself myself
+post: i you
+post: you i
+post: my your
+
+keyword: NONE 0
+decomposition: NONE
+reassembly: I’m sorry, I do not understand.
+reassembly: Can you tell me more about that?
+reassembly: Please continue.
+-
+keyword: sorry 4
+decomposition: NONE
+reassembly: You do not need to apologize.
+reassembly: There is nothing to be sorry about.
+reassembly: Don’t apologize. Please continue.
+-
+keyword: apologise 4
+decomposition: NONE
+reassembly: referto sorry
+-
+keyword: family 4
+decomposition: NONE
+reassembly: Tell me more about your (r).
+reassembly: How is your relationship with your (r)?
+decomposition: family is emotion
+reassembly: How do you feel that your (r)?
+-
+keyword: want 2
+decomposition: NONE
+reassembly: referto NONE
+decomposition: i want <
+reassembly: Why do you want (r)?
+decomposition: they want <
+reassembly: Why do you think they want (r)?
+-
+keyword: need 2
+decomposition: NONE
+reassembly: referto NONE
+decomposition: i need <
+reassembly: Why do you need (r)?
+decomposition: they need <
+reassembly: Why do you think they need (r)?
+-
+keyword: why 1
+decomposition: NONE <
+reassembly: Why do you think (r)?
+decomposition: why can't i <
+reassembly: Do you believe you should be able to (r)?
+reassembly: Would you like to be able to (r)?
+reassembly: Why do you think you cant (r)?
+decomposition: why don't you <
+reassembly: Why do you think I don't (r)?
+reassembly: Do you want me to (r)?
+decomposition: why <
+reassembly: Why what?
+-
+keyword: i 1
+decomposition: NONE
+reassembly: referto NONE
+decomposition: i think <
+reassembly: Why do you (r)?
+reassembly: Can you elaborate more?
+decomposition: i don’t <
+reassembly: Why do you say (r)?
+reassembly: Do you want to be able to (r)?
+decomposition: i love <
+reassembly: Why do you love (r)?
+reassembly: Is this love or obsession?
+reassembly: How does this love of (r) affect you?
+-
+keyword: wish 5
+decomposition: i wish <
+reassembly: Why do you wish (r)?
+reassembly: It is common to wish (r).
+reassembly: Do you think wishing (r) would make you happy?
+decomposition: they wish <
+reassembly: Why do you think they wish (r)?
+reassembly: It is common to wish (r).
+-
+keyword: have 2
+decomposition: NONE
+reassembly: referto NONE
+decomposition: i have <
+reassembly: Does having (r) worry you?
+reassembly: How does having (r) make you feel?
+decomposition: you have <
+reassembly: Would it help if I had (r)?
+reassembly: How would me having (r) affect you?
+-
+keyword: am 3
+decomposition: i am
+reassembly: What is making you (r)?
+reassembly: Can you think of the cause of why you are (r)?
+decomposition: am i
+reassembly: What is making you question if you are (r)?
+-
+keyword: feel 2
+decomposition: i feel <
+reassembly: Why do you feel (r)?
+reassembly: Is there a main cause behind these feelings?
+reassembly: Is this something that you feel on a regular basis?
+reassembly: Does feeling (r) affect how you go about your life?
+decomposition: they feel <
+reassembly: Could there be something you are doing that is making them feel (r)?
+reassembly: How does their feeling (r) make you feel?
+decomposition: she feels <
+reassembly: Is there a main cause behind these feelings?
+reassembly: Do you think this is something she feels on a regular basis?
+reassembly: Does feeling (r) affect how she goes about her life?
+decomposition: he feels <
+reassembly: Is there a main cause behind these feelings?
+reassembly: Do you think this is something he feels on a regular basis?
+reassembly: Does feeling (r) affect how he goes about his life?
+-
+keyword: feeling 4
+decomposition: i am feeling <
+reassembly: Why are you feeling (r)?
+decomposition: they are feeling <
+reassembly: Why do you think they feel (r)?
+decomposition: she is feeling <
+reassembly: Why do you think she feels (r)?
+decomposition: he is feeling <
+reassembly: Why do you think he feels (r)?
+-
+keyword: emotion 3
+decomposition: NONE
+reassembly: referto NONE
+decomposition: i am emotion
+reassembly: referto am
+decomposition: i am so emotion
+reassembly: referto am
+decomposition: am i emotion
+reassembly: referto am
+decomposition: i feel emotion
+reassembly: referto feel
+decomposition: he feels emotion
+reassembly: referto feel
+decomposition: she feels emotion 
+reassembly: referto feel
+decomposition: they feel emotion
+-
+keyword: no 3
+decomposition: NONE
+reassembly: Are you saying no to be negative?
+reassembly: Let’s try and move away from using the word no.
+reassembly: Can you think about this in a more positive light?
+reassembly: Why no?
+decomposition: there are no <
+reassembly: How does it make you feel when there are no (r)?
+decomposition: there is no <
+reassembly: Why do you think there is no (r)?
+decomposition: i have no <
+reassembly: Does having no (r) affect you mentally?
+reassembly: Would life be easier if you had (r)?
+-
+keyword: yes 3
+decomposition: NONE
+reassembly: You seem to be serious.
+reassembly: Are you sure?
+reassembly: I see.
+-
+keyword: hate 4
+decomposition: i hate <
+reassembly: It is common to hate (r).
+reassembly: Why do you think you hate (r)?
+-
+keyword: hates 4 <
+decomposition: family hates <
+reassembly: It is common to hate (r).
+reassembly: Why do you think they hate (r)?
+decomposition: he hates <
+reassembly: Why do you think he hates (r)?
+reassembly: It is common to hate (r).
+decomposition: she hates <
+reassembly: Why do you think she hates (r)?
+reassembly: It is common to hate (r).
+-
+keyword: remember 5
+decomposition: i remember <
+reassembly: Do you often thing of (r)?
+reassembly: Does thinking about (r) remind you of anything else?
+reassembly: Why do you remember (r) just now?
+-
+keyword: dream 4
+decomposition: NONE
+reassembly: What does that dream make you think?
+reassembly: Do you remember most of your dreams?
+reassembly: Do you think this dream is connected to your life?
+-
+keyword: love 4
+decomposition: i love <
+reassembly: Why do you love (r)?
+reassembly: Is there a reason you love (r)?
+decomposition: doesn't love <
+reassembly: Why do you think that is?
+decomposition: no love <
+reassembly: Why do you think you have no love?
+-
+keyword: mean 4
+decomposition: NONE
+reassembly: Why do think people feel the need to be mean?
+reassembly: Do you think being mean can severely affect people?
+-
+keyword: nice 4
+decomposition: NONE
+reassembly: How do you think being nice affects those around you?
+reassembly: Do you think you should be nice to everyone?
+-
+keyword: cheated 5
+decomposition: i cheated <
+reassembly: What is the cause for you cheating (r)?
+reassembly: How do you feel knowing that you cheated (r)?
+decomposition: family cheated <
+reassembly: Why do you think that they cheated (r)?
+-
+keyword: is 2
+decomposition: she is <
+reassembly: Why do you think she is (r)?
+decomposition: he is <
+reassembly: Why do you think he is (r)?
+-
+keyword: will 2
+decomposition: i will <
+reassembly: Do you feel the need to (r)?
+reassembly: Do you think it will help if you (r)?
+decomposition: she will <
+reassembly: Why do you think she feels the need to (r)?
+reassembly: Do you think you are doing something that will make her (r)?
+decomposition: he will <
+reassembly: Why do you think he feels the need to (r)?
+reassembly: Do you think you are doing something that will make him (r)?
+decomposition: they will <
+reassembly: Why do you think they feel the need to (r)?
+reassembly: Do you think you are doing something that will make them (r)?
+-
+FINAL
